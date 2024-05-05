@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>seatwork</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row m-5">
+        <div class="col-md-6">
+            <center>
+                <img src="robota.png">
+            </center>
+        </div>
+        <div class="col-md-6">
+            <div>
+                <p class="form-label">Number 1:</p>
+                <input class="form-control" type="number" id="input 1" value="10">
+            </div>
+            <br>
+            <div>
+                <p class="form-label">Number 2:</p>
+                <input class="form-control" type="number" id="input 2" value="10">
+            </div>
+            <br>
+            <p id="output">Output: 0</p>
+        </div>
+    </div>
+    <div class="row m-5">
+        <div class="col-md-6 d-grid">
+            <button class="btn btn-primary rounded-pill" id="add">X plus Y</button>
+        </div>
+        <div class="col-md-6 d-grid">
+            <button class="btn btn-primary rounded-pill" id="subtract">X minus Y</button>
+        </div>
+    </div>
+    <div class="row m-5">
+        <div class="col-md-6 d-grid">
+            <button class="btn btn-primary rounded-pill" id="less than">Check if X is less than Y</button>
+        </div>
+        <div class="col-md-6 d-grid">
+            <button class="btn btn-primary rounded-pill" id="greater than">Check if X is greater than Y</button>
+        </div>
+    </div>
+    <script>
+        function add() {
+            var x = parseInt(document.getElementById('input 1').value)
+            var y = parseInt(document.getElementById('input 2').value)
+            var value = x + y
+            alert(value)
+            document.getElementById('output').innerHTML = 'Output: ' + value
+        }
+        document.getElementById('add').onclick = add
+
+        function subtract() {
+            var x = parseInt(document.getElementById('input 1').value)
+            var y = parseInt(document.getElementById('input 2').value)
+            var value = x - y
+            alert(value)
+            document.getElementById('output').innerHTML = 'Output: ' + value
+        }
+        document.getElementById('subtract').onclick = subtract
+
+        function greaterthan() {
+            var x = parseInt(document.getElementById('input 1').value)
+            var y = parseInt(document.getElementById('input 2').value)
+            var value = x > y
+            alert(value)
+            document.getElementById('output').innerHTML = 'Output: ' + value
+        }
+        document.getElementById('greater than').onclick = greaterthan
+
+        function lessthan() {
+            var x = parseInt(document.getElementById('input 1').value)
+            var y = parseInt(document.getElementById('input 2').value)
+            console.log(x, y);
+            var value = x < y
+            alert(value)
+            document.getElementById('output').innerHTML = 'Output: ' + value
+        }
+        document.getElementById('less than').onclick = lessthan
+    </script>
+</body>
+</html>
